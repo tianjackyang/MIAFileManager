@@ -10,7 +10,7 @@
 @interface MIAFileManager : NSObject
 
 #pragma mark -
-#pragma 获取文件信息
+#pragma mark 获取文件信息
 /**
  *  获取目录文件某一个信息
  *
@@ -227,7 +227,7 @@
 +(BOOL)createFileAtPath:(NSString *)path withContent:(NSObject *)content overwrite:(BOOL)overwrite error:(NSError **)error;
 
 #pragma mark -
-#pragma mark
+#pragma mark 返回文件创建日期
 
 /**
  *  返回的创建日期
@@ -248,9 +248,14 @@
  */
 +(NSDate *)creationDateOfItemAtPath:(NSString *)path error:(NSError **)error;
 
+#pragma mark -
+#pragma mark 清空文件
+
 +(BOOL)emptyCachesDirectory;
 +(BOOL)emptyTemporaryDirectory;
 
+#pragma mark -
+#pragma mark 判断路径类型
 /**
  *  路径是否存在
  *
@@ -290,6 +295,8 @@
 +(BOOL)isFileItemAtPath:(NSString *)path;
 +(BOOL)isFileItemAtPath:(NSString *)path error:(NSError **)error;
 
+#pragma mark -
+#pragma mark 文件的可读写执行属性
 /**
  *  是否可读，可写，可执行
  *
